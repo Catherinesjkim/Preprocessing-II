@@ -1,3 +1,5 @@
+/* usage */
+/* functions */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -148,7 +150,7 @@ h1 {
 }
 h2 {
   font-size: 3.2rem;
-  padding-bottom: 10px;
+  padding: 15px 0;
 }
 h4 {
   font-size: 2.5rem;
@@ -159,15 +161,25 @@ p {
   font-size: 1.6rem;
   padding-bottom: 10px;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 .container {
   max-width: 800px;
-  width: 100%;
+  width: 120%;
   margin: 0 auto;
+  padding: 0px;
+  border-bottom: 2px dashed #C0C0C0;
 }
+
+.img-content {
+  padding: 10px 0;
+
+}
+
 .head {
   display: flex;
   justify-content: space-between;
@@ -180,6 +192,7 @@ img {
   padding-top: 30px;
 }
 h1 {
+  padding-top: 20px;
   align-self: flex-start;
   align-self: margin: 30px 0;
 }
@@ -199,23 +212,24 @@ a {
   color: black;
   font-size: 16px;
 }
-.container {
-  padding-top: 30px;
-}
+
 .footer {
-  width: 100%;
+  width: 100%
   border-top: 2px dashed silver;
   background: #FFEBCD;
 }
+
 .footer p {
   text-align: center;
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
 }
+
 .home header {
   border-bottom: 2px dashed #C0C0C0;
 }
+
 .home header .container {
   display: flex;
   align-items: flex-start;
@@ -231,13 +245,16 @@ a {
 .home header .container .img-content .img {
   margin-bottom: 30px;
 }
+.home header .container .img-content .img {
+  margin-bottom: 30px;
+}
 .home header .container .img-content .img h2 {
   margin-top: 30px;
 }
 .home .content-section {
   margin: 30px 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: flex;
   justify-content: space-between;
 }
 .home .content-section .text-content {
@@ -254,6 +271,14 @@ a {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+.home .inverse-content {
+  padding-bottom: 30px;
+  border-bottom: 2px dashed #C0C0C0;
+}
+.home .inverse-content .text-content{
+  padding-left: 1%;
+  padding-right: 0;
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -280,3 +305,25 @@ a {
   width: 30%;
   margin-bottom: 30px;
 }
+
+.content-pick {
+  border-bottom: 2px dashed #C0C0C0;
+}
+
+.btn {
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: teal;
+  color: white;
+  cursor: progress;
+  font-size: 20px;
+  text-align: center;
+}
+
+.destination .btn {
+  width: 100%;
+
+  &:hover {
+    /* The compiled color returned is #004d4d  */
+    background-color: darken(teal, 10%)
+  }
