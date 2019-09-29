@@ -15,7 +15,6 @@
 
 h1 {
   align-self: flex-start;
-  align-self: 
   margin: 30px 0;
 }
 
@@ -38,7 +37,21 @@ h1 {
     font-size: 16px;
   }
 
-  // Header 
-  .container {
-    padding-top: 30px;
+  // Mobile Version 
+  @media @mobile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+      display: flex;
+      justify-items: center;
+    }
+
+    .h1 {
+      align-self: flex-start; 
+    }
   }

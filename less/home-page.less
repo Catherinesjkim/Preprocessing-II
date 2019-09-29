@@ -1,16 +1,23 @@
 // Main Header
+header {
+  border-bottom: 2px dashed @navigation-border;
+
+    // Mobile Version - Used nested-at rules
+		@media @mobile {
+        width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-direction: column;
+    }
+  }
 
 .home {
   
-  header {
-    border-bottom: 2px dashed @navigation-border;
-    background-color: red;
-
     .container {
       display: flex;
       align-items: flex-start;
       align-items: stretch;
-      border-bottom: 2px dashed @navigation-border;
       
       .img-content {
         padding-top: 0px;
@@ -20,19 +27,28 @@
         margin-top: 30px;
         border-bottom: 2px dashed @navigation-border;
         
-    
         .img {
           margin-bottom: 30px;
         
+          .fun {
+            padding-top: 10px;
+          }
+
           h2 {
             margin-top: 30px;
-
-            p {
-              
-            }
+            padding-top: 10px;
           }
         }
-      }  
+      } 
+      
+      @media @mobile {
+          width: 100%;
+          display: column;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
     }
 
   .content-section {
@@ -41,7 +57,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -51,12 +66,19 @@
       width: 48%;
       padding-left: 1%;
 
-      img {
-        border-radius: 10px;
+    img {
+      border-radius: 10px;
+    }
+
+      @media @mobile {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
       }
     }
   }
-
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
@@ -69,6 +91,16 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+    }
+
+    @media @mobile {
+			.inverse-content .text-content {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+        flex-direction: column;
+      }
     }
   }
 
@@ -90,8 +122,19 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .button();
+      }
     }
-  }
-}
+
+    @media @mobile {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        }
+      }
 
 // home
